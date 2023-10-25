@@ -6,8 +6,9 @@ import fr.eurosport.sportstories.feature_media.domain.model.MediaElement
 import fr.eurosport.sportstories.feature_media.domain.repository.MediaRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class GetMedia(
+class GetMedia @Inject constructor(
     private val repository: MediaRepository
 ) {
     operator fun invoke(): Flow<Resource<List<MediaElement>>> {

@@ -1,4 +1,4 @@
-package fr.eurosport.sportstories.feature_media.data.local
+package fr.eurosport.sportstories.feature_media.data.cache
 
 import android.content.Context
 import androidx.room.Database
@@ -7,9 +7,9 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import fr.eurosport.sportstories.feature_media.data.local.entity.SportEntity
-import fr.eurosport.sportstories.feature_media.data.local.entity.StoryEntity
-import fr.eurosport.sportstories.feature_media.data.local.entity.VideoEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.SportEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.StoryEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.VideoEntity
 
 @Database(
     entities = [StoryEntity::class, VideoEntity::class, SportEntity::class],

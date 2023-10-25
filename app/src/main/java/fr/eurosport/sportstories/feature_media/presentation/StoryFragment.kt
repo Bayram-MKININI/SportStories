@@ -10,19 +10,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import dagger.hilt.android.AndroidEntryPoint
 import fr.eurosport.sportstories.R
 import fr.eurosport.sportstories.common.util.convertSecondsToTimeString
 import fr.eurosport.sportstories.feature_media.domain.model.Story
 import fr.eurosport.sportstories.feature_media.presentation.views.StoryView
 import fr.eurosport.sportstories.feature_media.presentation.views.StoryView.StoryViewAdapter
 import fr.eurosport.sportstories.feature_media.presentation.views.StoryView.StoryViewCallback
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
+@AndroidEntryPoint
 class StoryFragment : AppCompatDialogFragment() {
 
     private var storyView: StoryView? = null
-    private val mediaViewModel: MediaViewModel by sharedViewModel()
+    private val mediaViewModel by activityViewModels<MediaViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

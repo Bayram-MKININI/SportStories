@@ -1,5 +1,4 @@
-package fr.eurosport.sportstories.feature_media.data.local.entity
-
+package fr.eurosport.sportstories.feature_media.data.cache.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -14,16 +13,14 @@ data class VideoEntity(
     val title: String = "",
     val videoUrl: String = "",
     val viewCount: Int = 0
-){
-    fun toVideo(): Video {
-        return Video(
-            id = id,
-            dateTimestamp = dateTimestamp,
-            sport = sport.toSport(),
-            thumbUrl = thumbUrl,
-            title = title,
-            videoUrl = videoUrl,
-            viewCount = viewCount
-        )
-    }
+) {
+    fun toVideo() = Video(
+        id = id,
+        dateTimestamp = dateTimestamp,
+        sport = sport.toSport(),
+        thumbUrl = thumbUrl,
+        title = title,
+        videoUrl = videoUrl,
+        viewCount = viewCount
+    )
 }

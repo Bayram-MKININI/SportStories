@@ -1,9 +1,9 @@
-package fr.eurosport.sportstories.feature_media.data.local
+package fr.eurosport.sportstories.feature_media.data.cache
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 import com.squareup.moshi.Moshi
-import fr.eurosport.sportstories.feature_media.data.local.entity.SportEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.SportEntity
 
 @ProvidedTypeConverter
 class Converters(

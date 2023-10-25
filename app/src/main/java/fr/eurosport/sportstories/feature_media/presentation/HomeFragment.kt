@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import dagger.hilt.android.AndroidEntryPoint
 import fr.eurosport.sportstories.R
 import fr.eurosport.sportstories.common.STORY_FRAGMENT_TAG
 import fr.eurosport.sportstories.common.VIDEO_FRAGMENT_TAG
@@ -18,12 +20,12 @@ import fr.eurosport.sportstories.feature_media.domain.model.Video
 import fr.eurosport.sportstories.feature_media.presentation.views.HomeView
 import fr.eurosport.sportstories.feature_media.presentation.views.MediaItemView.MediaItemViewAdapter
 import kotlinx.coroutines.flow.collectLatest
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var homeView: HomeView? = null
-    private val mediaViewModel: MediaViewModel by sharedViewModel()
+    private val mediaViewModel by activityViewModels<MediaViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,

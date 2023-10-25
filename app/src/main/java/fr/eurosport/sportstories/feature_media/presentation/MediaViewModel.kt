@@ -2,14 +2,17 @@ package fr.eurosport.sportstories.feature_media.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import fr.eurosport.sportstories.common.util.DataError
 import fr.eurosport.sportstories.common.util.Resource
 import fr.eurosport.sportstories.feature_media.domain.model.MediaElement
 import fr.eurosport.sportstories.feature_media.domain.use_cases.GetMedia
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MediaViewModel(
+@HiltViewModel
+class MediaViewModel @Inject constructor(
     private val getMedia: GetMedia
 ) : ViewModel() {
 

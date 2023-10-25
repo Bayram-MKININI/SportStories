@@ -6,18 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import dagger.hilt.android.AndroidEntryPoint
 import fr.eurosport.sportstories.R
 import fr.eurosport.sportstories.feature_media.domain.model.Video
 import fr.eurosport.sportstories.feature_media.presentation.views.VideoView
 import fr.eurosport.sportstories.feature_media.presentation.views.VideoView.VideoViewAdapter
 import fr.eurosport.sportstories.feature_media.presentation.views.VideoView.VideoViewCallback
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
+@AndroidEntryPoint
 class VideoFragment : AppCompatDialogFragment() {
 
     private var videoView: VideoView? = null
-    private val mediaViewModel: MediaViewModel by sharedViewModel()
+    private val mediaViewModel by activityViewModels<MediaViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

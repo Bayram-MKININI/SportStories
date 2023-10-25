@@ -1,4 +1,4 @@
-package fr.eurosport.sportstories.feature_media.data.local.entity
+package fr.eurosport.sportstories.feature_media.data.cache.entity
 
 
 import androidx.room.Entity
@@ -10,10 +10,8 @@ data class SportEntity(
     @PrimaryKey val id: Int = 0,
     val name: String = ""
 ) {
-    fun toSport(): Sport {
-        return Sport(
-            id = id,
-            name = name
-        )
-    }
+    fun toSport() = Sport(
+        id = id,
+        name = name
+    )
 }

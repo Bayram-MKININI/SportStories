@@ -2,7 +2,7 @@ package fr.eurosport.sportstories.feature_media.data.remote.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import fr.eurosport.sportstories.feature_media.data.local.entity.VideoEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.VideoEntity
 
 @JsonClass(generateAdapter = true)
 data class VideoDTO(
@@ -22,15 +22,13 @@ data class VideoDTO(
     @Json(name = "views")
     val views: Int = 0
 ) {
-    fun toVideoEntity(): VideoEntity {
-        return VideoEntity(
-            id = id,
-            title = title,
-            videoUrl = url,
-            dateTimestamp = date,
-            sport = sport.toSportEntity(),
-            thumbUrl = thumb,
-            viewCount = views
-        )
-    }
+    fun toVideoEntity() = VideoEntity(
+        id = id,
+        title = title,
+        videoUrl = url,
+        dateTimestamp = date,
+        sport = sport.toSportEntity(),
+        thumbUrl = thumb,
+        viewCount = views
+    )
 }

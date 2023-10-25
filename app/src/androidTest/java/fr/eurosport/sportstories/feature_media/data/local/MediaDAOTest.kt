@@ -6,9 +6,12 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import fr.eurosport.sportstories.feature_media.data.local.entity.SportEntity
-import fr.eurosport.sportstories.feature_media.data.local.entity.StoryEntity
-import fr.eurosport.sportstories.feature_media.data.local.entity.VideoEntity
+import fr.eurosport.sportstories.feature_media.data.cache.Converters
+import fr.eurosport.sportstories.feature_media.data.cache.MediaDAO
+import fr.eurosport.sportstories.feature_media.data.cache.MediaDatabase
+import fr.eurosport.sportstories.feature_media.data.cache.entity.SportEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.StoryEntity
+import fr.eurosport.sportstories.feature_media.data.cache.entity.VideoEntity
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert
