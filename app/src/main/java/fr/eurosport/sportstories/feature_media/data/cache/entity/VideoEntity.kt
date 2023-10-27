@@ -2,7 +2,7 @@ package fr.eurosport.sportstories.feature_media.data.cache.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import fr.eurosport.sportstories.feature_media.domain.model.Video
+import fr.eurosport.sportstories.feature_media.domain.model.MediaElement.*
 
 @Entity
 data class VideoEntity(

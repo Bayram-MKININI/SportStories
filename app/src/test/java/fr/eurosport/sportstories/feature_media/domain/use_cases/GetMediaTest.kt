@@ -3,8 +3,7 @@ package fr.eurosport.sportstories.feature_media.domain.use_cases
 import fr.eurosport.sportstories.common.util.Resource
 import fr.eurosport.sportstories.feature_media.data.repository.FakeMediaRepository
 import fr.eurosport.sportstories.feature_media.domain.model.MediaElement
-import fr.eurosport.sportstories.feature_media.domain.model.Story
-import fr.eurosport.sportstories.feature_media.domain.model.Video
+import fr.eurosport.sportstories.feature_media.domain.model.MediaElement.*
 import fr.eurosport.sportstories.feature_media.domain.repository.MediaRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first

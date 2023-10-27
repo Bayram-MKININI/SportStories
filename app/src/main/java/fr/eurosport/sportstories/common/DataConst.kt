@@ -1,6 +1,5 @@
 package fr.eurosport.sportstories.common
 
 const val BASE_ENDPOINT = "https://extendsclass.com/api/"
-const val STORY_FRAGMENT_TAG = "story_fragment"
-const val VIDEO_FRAGMENT_TAG = "video_fragment"
-const val GOLDEN_RATIO = 1.6180339887
+const val SELECTED_MEDIA = "selectedMedia"
+const val GOLDEN_RATIO = 1.618034f

@@ -1,7 +1,8 @@
 package fr.eurosport.sportstories.feature_media.data.repository
 
 import fr.eurosport.sportstories.common.data.remote.RemoteApi
-import fr.eurosport.sportstories.common.util.DataError
+import fr.eurosport.sportstories.common.util.ErrorType.NETWORK_ERROR
+import fr.eurosport.sportstories.common.util.ErrorType.SYSTEM_ERROR
 import fr.eurosport.sportstories.common.util.Resource
 import fr.eurosport.sportstories.common.util.Resource.Error
 import fr.eurosport.sportstories.common.util.Resource.Loading
@@ -46,9 +47,9 @@ class MediaRepositoryImpl @Inject constructor(
             }
 
         } catch (ex: HttpException) {
-            emit(Error(dataError = DataError.SYSTEM_ERROR))
+            emit(Error(dataError = SYSTEM_ERROR))
         } catch (ex: IOException) {
-            emit(Error(dataError = DataError.NETWORK_ERROR))
+            emit(Error(dataError = NETWORK_ERROR))
         }
     }
 }
