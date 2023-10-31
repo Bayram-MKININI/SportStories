@@ -63,10 +63,12 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     private fun MainActivityScreen(
-        navController: NavHostController, viewModel: HomeViewModel
+        navController: NavHostController,
+        viewModel: HomeViewModel
     ) {
         NavHost(
-            navController = navController, startDestination = Screen.Medias.route
+            navController = navController,
+            startDestination = Screen.Medias.route
         ) {
             composable(Screen.Medias.route) {
                 HomeContent(viewModel) {
@@ -100,7 +102,8 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     private fun HomeContent(
-        viewModel: HomeViewModel, onNavigateToMedia: (MediaElementUI) -> Unit = {}
+        viewModel: HomeViewModel,
+        onNavigateToMedia: (MediaElementUI) -> Unit = {}
     ) {
         MediaListScreen(viewModel) { selectedMedia ->
             viewModel.setSelectedMedia(selectedMedia)

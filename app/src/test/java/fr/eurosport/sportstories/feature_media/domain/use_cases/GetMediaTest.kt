@@ -5,14 +5,12 @@ import fr.eurosport.sportstories.feature_media.data.repository.FakeMediaReposito
 import fr.eurosport.sportstories.feature_media.domain.model.MediaElement
 import fr.eurosport.sportstories.feature_media.domain.model.MediaElement.*
 import fr.eurosport.sportstories.feature_media.domain.repository.MediaRepository
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
-@ExperimentalCoroutinesApi
 class GetMediaTest {
 
     private lateinit var getMedia: GetMedia

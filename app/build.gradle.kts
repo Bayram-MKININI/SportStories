@@ -97,7 +97,7 @@ dependencies {
     implementation("androidx.compose.animation:animation:$composeVersion")
     implementation("androidx.compose.compiler:compiler:$composeCompilerVersion")
 
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     // Constraint layout
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
